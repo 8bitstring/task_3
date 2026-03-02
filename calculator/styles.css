@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #0A0B0D;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* glassmorphism card with blur effect */
+.calculator-card {
+    width: 100%;
+    max-width: 540px;
+    border-radius: 3.75rem;
+    padding: 2.25rem;
+    border: 2px solid blueviolet;
+    box-shadow: 
+        0 8px 32px rgba(31, 38, 135, 0.37),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    background-color: blue;
+}
+
+.calculator {
+    width: 100%;
+    background: transparent;
+}
+
+.display {
+    background: transparent;
+    padding: 2.25rem 1.5rem 1.5rem;
+    text-align: right;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background: whitesmoke;
+    margin: 1.125rem 0 1.5rem;
+}
+
+.result {
+    font-size: 4.5rem;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.975rem;
+}
+
+.btn {
+    height: 105px;
+    font-size: 2.625rem;
+    font-weight: 400;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-number {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-weight: 400;
+}
+
+.btn-number:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.btn-function {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 400;
+}
+
+.btn-function:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* glass effect with blue tint and glow */
+.btn-operator {
+    background: rgba(74, 158, 255, 0.6);
+    color: #fff;
+    font-weight: 500;
+    font-size: 3rem;
+    border: 1px solid rgba(74, 158, 255, 0.4);
+    box-shadow: 
+        0 4px 16px rgba(74, 158, 255, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.btn-operator:hover {
+    background: rgba(74, 158, 255, 0.75);
+    box-shadow: 
+        0 6px 20px rgba(74, 158, 255, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* make zero button take up 2 grid columns */
+.btn-zero {
+    grid-column: span 2;
+    border-radius: 1.5rem;
+    justify-content: flex-start;
+    padding-left: 3rem;
+}
+
